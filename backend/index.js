@@ -10,14 +10,14 @@ const app = pkg();
 app.use(pkg.json());
 
 app.use(cors());
-app.get('/', (request, response) => {
+app.get('https://phone-mania-nzm9.vercel.app/', (request, response) => {
   console.log(request);
   return response.status(234).send('Welcome To MERN Stack Tutorial');
 });
 
 // app.use('/contact',contactRoute);
 
-app.post("/", async(request,response) => {
+app.post("https://phone-mania-nzm9.vercel.app/", async(request,response) => {
     try{
         if (
             !request.body.name ||
