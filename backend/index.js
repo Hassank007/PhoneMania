@@ -9,7 +9,13 @@ const app = pkg();
 
 app.use(pkg.json());
 
-app.use(cors());
+app.use(cors(
+  {
+    origin: {"https://phone-mania-nzm9.vercel.app/"},
+    methods : {"POST","GET"},
+    credentials : true
+  }
+));
 app.get('https://phone-mania-nzm9-83wstw2m6-hassank007.vercel.app/', (request, response) => {
   console.log(request);
   return response.status(234).send('Welcome To MERN Stack Tutorial');
