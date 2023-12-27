@@ -16,14 +16,14 @@ app.use(cors(
     credentials : true
   }
 ));
-app.get('https://phone-mania-nzm9-83wstw2m6-hassank007.vercel.app/', (request, response) => {
+app.get('/', (request, response) => {
   console.log(request);
   return response.status(234).send('Welcome To MERN Stack Tutorial');
 });
 
 // app.use('/contact',contactRoute);
 
-app.post("https://phone-mania-nzm9-83wstw2m6-hassank007.vercel.app/", async(request,response) => {
+app.post("/", async(request,response) => {
     try{
         if (
             !request.body.name ||
