@@ -16,6 +16,10 @@ app.use(cors(
     credentials : true
   }
 ));
+app.get('/', (req,res) => {
+  return res.json("Hello");
+})
+
 app.get('/', (request, response) => {
   console.log(request);
   return response.status(234).send('Welcome To MERN Stack Tutorial');
